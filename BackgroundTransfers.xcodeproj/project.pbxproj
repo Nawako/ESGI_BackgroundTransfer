@@ -21,6 +21,8 @@
 		EC32BEA91BC3FD0100FECCA2 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC32BEA81BC3FD0100FECCA2 /* ExtensionDelegate.m */; };
 		EC32BEAC1BC3FD0100FECCA2 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC32BEAB1BC3FD0100FECCA2 /* NotificationController.m */; };
 		EC32BEAE1BC3FD0100FECCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC32BEAD1BC3FD0100FECCA2 /* Assets.xcassets */; };
+		EC32BEBE1BC3FE7200FECCA2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32BEBD1BC3FE7200FECCA2 /* WatchConnectivity.framework */; };
+		EC32BEBF1BC3FE9A00FECCA2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32BEBD1BC3FE7200FECCA2 /* WatchConnectivity.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,7 @@
 		EC32BEAB1BC3FD0100FECCA2 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		EC32BEAD1BC3FD0100FECCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC32BEAF1BC3FD0100FECCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC32BEBD1BC3FE7200FECCA2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC32BEBE1BC3FE7200FECCA2 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC32BEBF1BC3FE9A00FECCA2 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +118,7 @@
 		EC32BE6E1BC3FD0100FECCA2 = {
 			isa = PBXGroup;
 			children = (
+				EC32BEBD1BC3FE7200FECCA2 /* WatchConnectivity.framework */,
 				EC32BE791BC3FD0100FECCA2 /* BackgroundTransfers */,
 				EC32BE921BC3FD0100FECCA2 /* BackgroundTransfers WatchKit App */,
 				EC32BEA11BC3FD0100FECCA2 /* BackgroundTransfers WatchKit Extension */,
