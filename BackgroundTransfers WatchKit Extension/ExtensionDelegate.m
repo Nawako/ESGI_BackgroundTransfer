@@ -25,6 +25,9 @@
 }
 
 - (void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *, id> *)userInfo {
+    NSString* documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    NSString* filePath = [documentPath stringByAppendingPathComponent:@"userinfo.archive"];
+    [NSKeyedArchiver archiveRootObject:userInfo toFile:filePath];
     NSLog(@"%@", userInfo);
 }
 

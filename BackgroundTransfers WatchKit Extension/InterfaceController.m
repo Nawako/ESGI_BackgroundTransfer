@@ -25,6 +25,14 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    NSString* documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    NSString* filePath = [documentPath stringByAppendingPathComponent:@"userinfo.archive"];
+    NSDictionary* userInfo = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    NSLog(@"%@", userInfo);
+    
+    [self.levelLabel setText:[[userInfo objectForKey: @"level"] stringValue] ];
+    
 }
 
 - (void)didDeactivate {
