@@ -28,6 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)onTouchNextLevel:(id)sender {
+    level_++;
     if ([WCSession defaultSession].paired && [WCSession defaultSession].watchAppInstalled) {
         [[WCSession defaultSession] transferUserInfo:@{
                                                       @"level" : @(level_)
