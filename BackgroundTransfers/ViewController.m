@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface ViewController ()
+@interface ViewController () {
+    @private
+    NSUInteger level_;
+}
 
 @end
 
@@ -24,7 +28,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)onTouchNextLevel:(id)sender {
-    
+    if ([WCSession defaultSession].paired && [WCSession defaultSession].watchAppInstalled) {
+        [[WCSession defaultSession] transferUserInfo:@{
+                                                      @"level" : @(level_)
+                                                      }];
+        // @{ } Créer un NSDictionnary InLine
+    }
 }
 
 @end
