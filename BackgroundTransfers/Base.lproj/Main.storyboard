@@ -16,19 +16,49 @@
                                 <rect key="frame" x="20" y="95" width="280" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.91185263067999367" blue="0.39937765567847028" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Next Level"/>
+                                <state key="normal" title="Level Up"/>
                                 <connections>
                                     <action selector="onTouchNextLevel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tWQ-C1-tDN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J4Q-u0-uY2">
-                                <rect key="frame" x="141" y="306" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H3H-EA-VUZ">
+                                <rect key="frame" x="20" y="225" width="280" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.9118526307" blue="0.3993776557" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Level Down"/>
+                                <connections>
+                                    <action selector="onTouchDownLevel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCm-0o-CfG"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J4Q-u0-uY2">
+                                <rect key="frame" x="141" y="457" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="onTouchReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycL-bl-qYz"/>
+                                </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="0PQ-rQ-xdv">
+                                <rect key="frame" x="251" y="409" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTouchSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mv6-Ec-1qw"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activer menu secret" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n9k-Ld-0b3">
+                                <rect key="frame" x="20" y="409" width="171" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="J4Q-u0-uY2" id="QU9-G9-vM7"/>
+                        <outlet property="secretSwitch" destination="0PQ-rQ-xdv" id="qlx-e4-NlT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

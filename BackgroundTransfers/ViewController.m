@@ -36,5 +36,40 @@
         // @{ } Créer un NSDictionnary InLine
     }
 }
+- (IBAction)onTouchDownLevel:(id)sender {
+    level_--;
+    if ([WCSession defaultSession].paired && [WCSession defaultSession].watchAppInstalled) {
+        [[WCSession defaultSession] transferUserInfo:@{
+                                                       @"level" : @(level_)
+                                                       }];
+    }
+}
+- (IBAction)onTouchSwitch:(id)sender {
+    if (self.secretSwitch.on) {
+        self.resetButton.hidden = false;
+    } else {
+        self.resetButton.hidden = true;
+    }
+}
+
+- (IBAction)onTouchReset:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Quitter" message:@"Êtes-vous sûr de vouloir quitter l'application ?" delegate:self cancelButtonTitle:@"Quitter" otherButtonTitles:@"Annuler", nil];
+    [alert show];
+    
+    level_ = 0;
+    if ([WCSession defaultSession].paired && [WCSession defaultSession].watchAppInstalled) {
+        [[WCSession defaultSession] transferUserInfo:@{
+                                                       @"level" : @(level_)
+                                                       }];
+    }
+}
+
+// Ne marche pas, je ne passe pas dans la boucle
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        NSLog(@"QUIT APP");
+    }
+}
 
 @end
